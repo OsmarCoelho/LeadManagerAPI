@@ -18,8 +18,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Controllers\" />
+    <None Remove="Entities\" />
+    <None Remove="Services\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Commands\" />
+    <None Remove="Repositories\Notifications\" />
+    <None Remove="Repositories\Commands\Handlers\" />
+    <None Remove="Repositories\Notifications\Handlers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Commands\" />
+    <Folder Include="Repositories\Notifications\" />
+    <Folder Include="Repositories\Commands\Handlers\" />
+    <Folder Include="Repositories\Notifications\Handlers\" />
   </ItemGroup>
 </Project>
