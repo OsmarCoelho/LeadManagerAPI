@@ -1,4 +1,4 @@
-<h1>Como rodar o LeadManegerAPI:</h1>
+<h1>Como rodar o LeadManagerAPI:</h1>
 
 <h2>Requisitos:</h2>
 <p>Para roadar o LeadManagerAPI garanta que as seguintes ferramentas estejam instaladas no seu sistema:</p>
@@ -18,3 +18,6 @@
   <li>Rodar o código: `dotnet run`</li>
 </ul>
 <p>Nesse ponto a API deverá estar rodando no seu localhost.</p>
+
+<p>O projeto usa por padrão a porta 7045 do computador.</p>
+<p>Para adicionar Leads e acessar todas rotas da API use o "swagger", disponivel após rodar o projeto através da rota https://localhost:7045/swagger</p>
