@@ -15,6 +15,7 @@ namespace LeadManagerAPI.Entities
         public string Suburb { get; set; }
         public int Number { get; set; }
         public bool Accepted { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         public Lead() { }
 

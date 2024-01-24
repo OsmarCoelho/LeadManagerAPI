@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace LeadManagerAPI.Migrations
 {
-    public partial class Leads : Migration
+    public partial class Lead : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,7 +25,8 @@ namespace LeadManagerAPI.Migrations
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
                     Suburb = table.Column<string>(type: "text", nullable: false),
                     Number = table.Column<int>(type: "integer", nullable: false),
-                    Accepted = table.Column<bool>(type: "boolean", nullable: false)
+                    Accepted = table.Column<bool>(type: "boolean", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
