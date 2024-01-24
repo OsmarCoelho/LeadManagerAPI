@@ -13,7 +13,7 @@
 <ul>
   <li>Verificar todas os requisitos acima;</li>
   <li>Iniciar o terminal;</li>
-  <li>Entrar na pasta "LeadManagerAPI";</li>
+  <li>Entrar na pasta "LeadManagerAPI" dentro do projeto "LeadManagerAPI";</li>
   <li>Rodar o código: `dotnet ef database update` para gerar o banco de dados a ser usado;</li>
   <li>Rodar o código: `dotnet run`</li>
 </ul>
