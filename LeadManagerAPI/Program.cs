@@ -15,6 +15,19 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<ApiDbContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("LeadManagerDataBse")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CorsPolicy",
+                      builder =>
+                      {
+                          builder
+                          .AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                      });
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +36,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

@@ -7,7 +7,7 @@ using LeadManagerAPI.Services;
 namespace LeadManagerAPI.Controllers
 {
     [ApiController]
-    [Route("api/LeadManager/[action]")]
+    [Route("LeadManager/[action]")]
     public class LeadManagerController : ControllerBase
     {
 
@@ -105,11 +105,12 @@ namespace LeadManagerAPI.Controllers
         [HttpPatch]
         public JsonResult AcceptLead(int Id)
         {
-
+            var notification = new NotificationService();
             var leadInDb = _context.Leads.Find(Id);
 
             if (leadInDb == null || leadInDb.Accepted)
             {
+                notification.SendNotification("Proposta já aceita.");
                 return new JsonResult(NotFound());
             }
             else
@@ -120,6 +121,7 @@ namespace LeadManagerAPI.Controllers
                 _context.Leads.Add(newLead);
                 _context.SaveChanges();
 
+                notification.SendNotification("Proposta aceita com sucesso.");
                 return new JsonResult(Ok(newLead));                
             }
         }

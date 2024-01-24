@@ -1,26 +1,28 @@
 ﻿<Properties StartupConfiguration="{394F403C-FD66-4865-8605-0CEEABC4E904}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.LeadManagerAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LeadManagerAPI/Controllers/LeadManagerController.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LeadManagerAPI/Services/NotificationService.cs">
     <Files>
-      <File FileName="LeadManagerAPI/Repositories/Commands/Handlers/CreateAddressCommandHandler.cs" Line="12" Column="1" />
-      <File FileName="LeadManagerAPI/Repositories/Commands/CreateAddressCommand.cs" Line="7" Column="6" />
-      <File FileName="LeadManagerAPI/Program.cs" Line="23" Column="1" />
-      <File FileName="LeadManagerAPI/Controllers/LeadManagerController.cs" Line="21" Column="10" />
+      <File FileName="LeadManagerAPI/Program.cs" />
+      <File FileName="LeadManagerAPI/Controllers/LeadManagerController.cs" Line="124" Column="36" />
+      <File FileName="LeadManagerAPI/Entities/Lead.cs" />
+      <File FileName="LeadManagerAPI/Repositories/ApiDbContext.cs" />
+      <File FileName="LeadManagerAPI/Properties/launchSettings.json" />
+      <File FileName="LeadManagerAPI/Services/LeadService.cs" />
+      <File FileName="LeadManagerAPI/Services/NotificationService.cs" Line="12" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LeadManagerAPI">
+          <Node name="LeadManagerAPI" expanded="True">
             <Node name="LeadManagerAPI">
-              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Repositories">
-                <Node name="Commands" expanded="True">
-                  <Node name="Handlers" expanded="True" />
-                </Node>
+              <Node name="Services" expanded="True">
+                <Node name="NotificationService.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -28,7 +30,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
