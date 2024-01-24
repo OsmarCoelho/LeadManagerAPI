@@ -29,7 +29,9 @@ namespace LeadManagerAPI.Services
                 _Lead.Suburb,
                 _Lead.Number,
 				true,
-                false
+                false,
+                _Lead.CreatedDate
+
             );
 
 			return newLead;
@@ -49,7 +51,8 @@ namespace LeadManagerAPI.Services
                 _Lead.Suburb,
                 _Lead.Number,
                 false,
-                true
+                true,
+                _Lead.CreatedDate
             );
 
             return newLead;
