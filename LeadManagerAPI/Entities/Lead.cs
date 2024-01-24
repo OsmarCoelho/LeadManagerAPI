@@ -15,6 +15,7 @@ namespace LeadManagerAPI.Entities
         public string Suburb { get; set; }
         public int Number { get; set; }
         public bool Accepted { get; set; }
+        public bool Rejected { get; set; }
         public DateTime CreatedDate { get; set; }
 
         public Lead() { }
@@ -30,7 +31,8 @@ namespace LeadManagerAPI.Entities
             string _PhoneNumber,
             string _Suburb,
             int _Number,
-            bool _Accepted
+            bool _Accepted,
+            bool _Rejected
         )
         {
             Id = _Id;
@@ -44,6 +46,8 @@ namespace LeadManagerAPI.Entities
             Suburb = _Suburb;
             Number = _Number;
             Accepted = _Accepted;
+            Rejected = _Rejected;
+            CreatedDate = new DateTime();
         }
     }
 }

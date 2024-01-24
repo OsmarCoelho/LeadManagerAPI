@@ -28,10 +28,31 @@ namespace LeadManagerAPI.Services
                 _Lead.PhoneNumber,
                 _Lead.Suburb,
                 _Lead.Number,
-				true
+				true,
+                false
             );
 
 			return newLead;
+        }
+
+        public Lead RejectLead(Lead _Lead)
+        {
+            var newLead = new Lead(
+                _Lead.Id,
+                _Lead.Price,
+                _Lead.FirstName,
+                _Lead.Surname,
+                _Lead.Category,
+                _Lead.Description,
+                _Lead.Email,
+                _Lead.PhoneNumber,
+                _Lead.Suburb,
+                _Lead.Number,
+                false,
+                true
+            );
+
+            return newLead;
         }
 
 		private float CalculateNewPrice(float _Price) {

@@ -77,7 +77,7 @@ namespace LeadManagerAPI.Controllers
         {
 
             var leads = _context.Leads.ToList()
-                .Where(lead => !lead.Accepted)
+                .Where(lead => !lead.Accepted && !lead.Rejected)
                 .OrderBy(lead => lead.Id);
             return new JsonResult(Ok(leads));
 
@@ -87,7 +87,7 @@ namespace LeadManagerAPI.Controllers
         public JsonResult GetAllAccepted()
         {
             var leads = _context.Leads.ToList()
-                .Where(lead => lead.Accepted)
+                .Where(lead => lead.Accepted && !lead.Rejected)
                 .OrderBy(lead => lead.Id);
 
             return new JsonResult(Ok(leads));
@@ -123,6 +123,30 @@ namespace LeadManagerAPI.Controllers
 
                 notification.SendNotification("Proposta aceita com sucesso.");
                 return new JsonResult(Ok(newLead));                
+            }
+        }
+
+        [HttpPatch]
+        public JsonResult DeclineLead(int Id)
+        {
+            var notification = new NotificationService();
+            var leadInDb = _context.Leads.Find(Id);
+
+            if (leadInDb == null || leadInDb.Rejected)
+            {
+                notification.SendNotification("Proposta já recusada.");
+                return new JsonResult(NotFound());
+            }
+            else
+            {
+                var newLead = new LeadService().RejectLead(leadInDb);
+
+                _context.Leads.Remove(leadInDb);
+                _context.Leads.Add(newLead);
+                _context.SaveChanges();
+
+                notification.SendNotification("Proposta recusada.");
+                return new JsonResult(Ok(newLead));
             }
         }
     }
