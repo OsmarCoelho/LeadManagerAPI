@@ -5,12 +5,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace LeadManagerAPI.Migrations
 {
-    public partial class Leads : Migration
+    public partial class AddressLead : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Address",
+                name: "Addresses",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -20,36 +20,33 @@ namespace LeadManagerAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Address", x => x.Id);
+                    table.PrimaryKey("PK_Addresses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Leads",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Id = table.Column<int>(type: "integer", nullable: false),
                     Price = table.Column<float>(type: "real", nullable: false),
                     FirstName = table.Column<string>(type: "text", nullable: false),
                     Category = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    AddressId = table.Column<int>(type: "integer", nullable: false)
+                    Surname = table.Column<string>(type: "text", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "text", nullable: false),
+                    Accepted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Leads", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Leads_Address_AddressId",
-                        column: x => x.AddressId,
-                        principalTable: "Address",
+                        name: "FK_Leads_Addresses_Id",
+                        column: x => x.Id,
+                        principalTable: "Addresses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Leads_AddressId",
-                table: "Leads",
-                column: "AddressId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -58,7 +55,7 @@ namespace LeadManagerAPI.Migrations
                 name: "Leads");
 
             migrationBuilder.DropTable(
-                name: "Address");
+                name: "Addresses");
         }
     }
 }

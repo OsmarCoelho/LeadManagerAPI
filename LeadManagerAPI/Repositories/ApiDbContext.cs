@@ -1,4 +1,5 @@
-﻿using LeadManagerAPI.Entities;
+﻿using System.Reflection.Metadata;
+using LeadManagerAPI.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -18,7 +19,7 @@ namespace PostgreSQL.Data
             options.UseNpgsql(Configuration.GetConnectionString("LeadManagerDataBse"));
         }
 
-        public DbSet<Lead> Leads { get; set; }
-        public DbSet<AcceptedLead> AcceptedLeads { get; set; }
+        public DbSet<LeadModel> Leads { get; set; }
+
     }
 }

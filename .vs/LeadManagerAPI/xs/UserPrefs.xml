@@ -2,14 +2,26 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.LeadManagerAPI FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LeadManagerAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LeadManagerAPI/Controllers/LeadManagerController.cs">
+    <Files>
+      <File FileName="LeadManagerAPI/Repositories/Commands/Handlers/CreateAddressCommandHandler.cs" Line="12" Column="1" />
+      <File FileName="LeadManagerAPI/Repositories/Commands/CreateAddressCommand.cs" Line="7" Column="6" />
+      <File FileName="LeadManagerAPI/Program.cs" Line="23" Column="1" />
+      <File FileName="LeadManagerAPI/Controllers/LeadManagerController.cs" Line="21" Column="10" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LeadManagerAPI">
-            <Node name="LeadManagerAPI" expanded="True">
+            <Node name="LeadManagerAPI">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="Repositories">
+                <Node name="Commands" expanded="True">
+                  <Node name="Handlers" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
