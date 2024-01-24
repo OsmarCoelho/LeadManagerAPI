@@ -11,5 +11,10 @@
 <h2>Passo-a-passo:</h2>
 <p></p>
 <ul>
-  
+  <li>Verificar todas os requisitos acima;</li>
+  <li>Iniciar o terminal;</li>
+  <li>Entrar na pasta "LeadManagerAPI";</li>
+  <li>Rodar o código: `dotnet ef database update` para gerar o banco de dados a ser usado;</li>
+  <li>Rodar o código: `dotnet run`</li>
 </ul>
+<p>Nesse ponto a API deverá estar rodando no seu localhost.</p>
