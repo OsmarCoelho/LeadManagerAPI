@@ -21,7 +21,7 @@ namespace LeadManagerAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("LeadManagerAPI.Entities.LeadModel", b =>
+            modelBuilder.Entity("LeadManagerAPI.Entities.Lead", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -19,7 +19,7 @@ namespace PostgreSQL.Data
             options.UseNpgsql(Configuration.GetConnectionString("LeadManagerDataBse"));
         }
 
-        public DbSet<LeadModel> Leads { get; set; }
+        public DbSet<Lead> Leads { get; set; }
 
     }
 }

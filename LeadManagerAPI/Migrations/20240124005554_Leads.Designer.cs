@@ -11,7 +11,7 @@ using PostgreSQL.Data;
 namespace LeadManagerAPI.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20240123235419_Leads")]
+    [Migration("20240124005554_Leads")]
     partial class Leads
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,7 @@ namespace LeadManagerAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("LeadManagerAPI.Entities.LeadModel", b =>
+            modelBuilder.Entity("LeadManagerAPI.Entities.Lead", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

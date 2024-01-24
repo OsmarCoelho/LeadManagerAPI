@@ -16,11 +16,10 @@ namespace LeadManagerAPI.Controllers
         public LeadManagerController( ApiDbContext context)
         {
             this._context = context;
-
         }
         
         [HttpPost]
-        public JsonResult CreateLead(LeadModel lead)
+        public JsonResult CreateLead(Lead lead)
         {
             if(lead.Id == 0)
             {
@@ -45,7 +44,7 @@ namespace LeadManagerAPI.Controllers
         }
 
         [HttpPatch]
-        public JsonResult EditLead(LeadModel lead)
+        public JsonResult EditLead(Lead lead)
         {
             
                 var leadInDb = _context.Leads.Find(lead.Id);
