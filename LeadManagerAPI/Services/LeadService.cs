@@ -10,7 +10,11 @@ namespace LeadManagerAPI.Services
 
         public LeadService() { }
 
-		public Lead AcceptLead(Lead _Lead) {
+        public LeadService(float _DiscountPercentage) {
+            DiscountPercentage = _DiscountPercentage;
+        }
+
+        public Lead AcceptLead(Lead _Lead) {
             var _Price = this.CalculateNewPrice(_Lead.Price);
 
             var newLead = new Lead(
